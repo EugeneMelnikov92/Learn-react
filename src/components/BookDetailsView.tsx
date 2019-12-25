@@ -4,7 +4,7 @@ class BookDetailsView extends React.Component {
     render() {
         return (
             <div>
-                This is Author Details View!
+                This is Book!
             </div>
         );
     }

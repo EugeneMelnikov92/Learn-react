@@ -1,6 +1,6 @@
-import {Books} from "./BooksModel";
+import {Books, BooksModel} from "./BooksModel";
 
-interface AuthorsModel {
+export interface AuthorsModel {
     firstName: string;
     lastName: string;
     yearOfBirth: string;
@@ -15,16 +15,18 @@ export class Authors implements AuthorsModel {
     books;
 
     constructor(
-        firstName:string,
-        lastName:string,
-        yearOfBirth:string,
-        books:Books) {
+        firstName: string,
+        lastName: string,
+        yearOfBirth: string,
+        books: BooksModel) {
         this.firstName = firstName,
-        this.lastName = lastName,
-        this.yearOfBirth = yearOfBirth,
-        this.books = books;
+            this.lastName = lastName,
+            this.yearOfBirth = yearOfBirth,
+            this.books = books;
     }
 
-
+    public getAuthorBook(books: BooksModel) {
+        // TODO: implement functionality for getting books list
+    }
 
 }
