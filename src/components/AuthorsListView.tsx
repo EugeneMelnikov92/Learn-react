@@ -40,7 +40,7 @@ class AuthorsListView extends React.Component<AuthorsModel> {
                 <li key={index} className="list-group-item d-flex align-items-center">
                     <div className="badge badge-primary badge-pill mr-4">{author.yearOfBirth}</div>
                     <div className="d-flex w-100 justify-content-between">
-                        <Link to="/AuthorData">{author.firstName + ' ' + author.lastName}</Link>
+                        <Link style={{'fontSize': '1.5rem'}} to="/AuthorData">{author.firstName + ' ' + author.lastName}</Link>
                         <small>книг - {author.books.books.length}</small>
                     </div>
                 </li>
@@ -55,13 +55,10 @@ class AuthorsListView extends React.Component<AuthorsModel> {
         return (
 
             <div>
-                <div className="card" style={{'minWidth': '25rem'}}>
-                    <Router>
-                        <ul className="list-group list-group-flush">
-                            {this.parsedAuthorsList()}
-                            <Route path="/AuthorData" component={AuthorDetailsView} />
-                        </ul>
-                    </Router>
+                <div className="card" style={{'minWidth': '30rem'}}>
+                    <ul className="list-group list-group-flush">
+                        {this.parsedAuthorsList()}
+                    </ul>
                 </div>
             </div>
         );

@@ -27,20 +27,20 @@ font-size: calc(10px + 2vmin);
 
 
 class App extends React.Component {
-  render() {
-    return (
-      <Center>
-        <Header>
-            <Router>
-                <div>
-                    <Route exact path="/" component={AuthorsListView} />
-                </div>
-            </Router>
-          <></>
-        </Header>
-      </Center>
-    );
-  }
+    render() {
+        return (
+            <Center>
+                <Header>
+                    <Router>
+                        <Route exact path="/" component={AuthorsListView} />
+                        <Route path="/AuthorData" component={AuthorDetailsView} />
+                        <Route path="/BookData" component={BookDetailsView} />
+                    </Router>
+                    <></>
+                </Header>
+            </Center>
+        );
+    }
 }
 
 export default App;

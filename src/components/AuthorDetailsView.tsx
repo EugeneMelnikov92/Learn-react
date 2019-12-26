@@ -12,10 +12,7 @@ class AuthorDetailsView extends React.Component {
         return (
             <div>
                 <h3>This is Book Details View!</h3>
-                <Router>
-                    <Link to="/BookData">BookData</Link>
-                    <Route path="/BookData" component={BookDetailsView} />
-                </Router>
+                <Link to="/BookData">BookData</Link>
                 <></>
             </div>
         );
